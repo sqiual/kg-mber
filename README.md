@@ -13,7 +13,7 @@ Our KG-Mber introduces a behavior mutual collaboration mechanism designed to enh
 <p align="center">
   <img src="assets/KG-Mber.jpg" alt="KG-Mber model framework" width="900">
   <br>
-  The model architecture of the proposed KG-Mber framework.
+  <b>Figure 1.</b> The model architecture of the proposed KG-Mber framework.
 </p>
 
 
