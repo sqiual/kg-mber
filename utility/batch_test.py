@@ -1,33 +1,9 @@
-'''
-Created on Oct 10, 2018
-Tensorflow Implementation of Neural Graph Collaborative Filtering (NGCF) model in:
-Wang Xiang et al. Neural Graph Collaborative Filtering. In SIGIR 2019.
-
-@author: Xiang Wang (xiangwang@u.nus.edu)
-'''
 import utility.metrics as metrics
 from utility.parser import parse_args
 from utility.load_data import *
 import multiprocessing
 import heapq
 import parser
-
-# cores = multiprocessing.cpu_count() // 2
-
-# args = parse_args()
-# Ks = eval(args.Ks)
-
-# # data_generator = Data(path=args.data_path + args.dataset, batch_size=args.batch_size)
-# # data_generator = SBDataHandler(path=args.data_path + args.dataset, batch_size=args.batch_size)
-
-# data_generator = DataHandler(dataset=args.dataset, batch_size=args.batch_size)
-# # data_generator.LoadData()
-# USR_NUM, ITEM_NUM = data_generator.n_users, data_generator.n_items
-# N_TRAIN, N_TEST = data_generator.n_train, data_generator.n_test
-# if args.dataset == 'amazon-book':
-#     BATCH_SIZE = args.batch_size // 4
-# else:
-#     BATCH_SIZE = args.batch_size // 2
 
 
 def ranklist_by_heapq(user_pos_test, test_items, rating, Ks):

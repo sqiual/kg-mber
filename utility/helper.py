@@ -12,7 +12,7 @@ def get_local_time():
 
 class Logger(object):
     def __init__(self, log_configs=True):
-        log_dir_path = './log/'
+        log_dir_path = './logs/'
         if not os.path.exists(log_dir_path):
             os.makedirs(log_dir_path)
         self.logger = logging.getLogger('train_logger')

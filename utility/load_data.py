@@ -1,11 +1,3 @@
-'''
-Created on Oct 10, 2018
-Tensorflow Implementation of Neural Graph Collaborative Filtering (NGCF) model in:
-Wang Xiang et al. Neural Graph Collaborative Filtering. In SIGIR 2019.
-
-@author: Xiang Wang (xiangwang@u.nus.edu)
-'''
-
 import numpy as np
 import random as rd
 import scipy.sparse as sp
@@ -151,7 +143,7 @@ class DataHandler(object):
         self.bpr = BPRLoss(self.Kg_model, self.kg_optimizer)
 
     def get_adj_mat(self):
-        self.saveAdjMatPath = 'Adj_Mats/' + self.dataset_name
+        self.saveAdjMatPath = 'dataset/adj_mats/' + self.dataset_name
         os.makedirs(self.saveAdjMatPath, exist_ok=True)
 
         adj_mat_list = []
