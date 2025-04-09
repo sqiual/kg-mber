@@ -45,5 +45,3 @@ Early stopping is trigger at step: 10 log:0.08463661453541885
 Best Iter=[84]@[2.6h]	recall=[0.0915	0.1081	0.1362], ndcg=[0.0517	0.0559	0.0616]
 ```
 
-### Benchmarks Preparation
-We contain the default dataset Retail-Rocket in this repo for demo purpose. 
