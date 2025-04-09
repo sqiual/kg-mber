@@ -1,0 +1,32 @@
+# optimizer:
+#   name: adam
+#   lr: 3.e-4 # not 1e-3
+#   weight_decay: 1.e-3
+#   opt_base_lr: 1.e-3
+#   opt_max_lr: 5.e-3
+#   opt_weight_decay: 1.e-4
+
+
+model:
+  name: kgmbr # case-insensitive
+  kg_lr: 4.e-3
+  decay: 1.e-4
+  dropout: 1
+  latent_dim_rec: 32
+  lightGCN_n_layers: 3
+  dropout: 0.
+  keep_prob: 0.7
+  A_n_fold: 100
+  A_split: False
+  entity_num_per_item: 10
+  kgc_temp: 0.2
+  kg_p_drop: 0.5
+  device: cuda:0
+
+device: cuda:0
+
+tune:
+  enable: false # Whether to enable grid search to search for optimal hyperparameters
+  hyperparameters: [layer_num, reg_weight] # The name of the hyperparameter
+  layer_num: [1, 2, 3] # Use a list to store the search range
+  reg_weight: [1.0e-1, 1.0e-2, 1.0e-3]
